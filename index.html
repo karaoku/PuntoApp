@@ -6,14 +6,20 @@
 	<title>Punto Uygulaması Yönlendirme Ekranı</title>
 </head>
 <body>
-	<h1>Yönlendiriliyorsunuz...</h1>
+	<h1 id="demo">Yönlendiriliyorsunuz...</h1>
 	<script type="text/javascript">
 		var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 		if (isIOS) {
-		  console.log('This is a IOS device');
+			document.getElementById("demo").innerHTML = "Punto App Store sayfasına yönlendiriliyorsunuz...";
+
+  			window.location.href = "https://apps.apple.com/tr/app/id1536803478";
+
 		} else {
-		  console.log('This is Not a IOS device');
+		  	document.getElementById("demo").innerHTML = "Punto Google Play sayfasına yönlendiriliyorsunuz...";
+
+		 	window.location.href = "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.punto.punto&ddl=1&pcampaignid=web_ddl_1";
 		}
+		
 	</script>
 </body>
 </html>
